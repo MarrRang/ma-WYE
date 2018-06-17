@@ -4,14 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
-    android:weightSum="80">
+    android:weightSum="90">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/info_img_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="20" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:paddingLeft="32dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            >
+
+            <TextView
+                android:id="@+id/info_Text_restaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="test"
+                android:textColor="#000000"
+                android:textSize="13pt" />
+
+            <TextView
+                android:id="@+id/info_Text_restaurantFollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_Text_restaurantName"
+                android:layout_marginTop="1dp"
+                android:text="팔로우"
+                android:textColor="#000000"
+                android:textSize="5pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/info_Text_restaurantFollow"
+                android:layout_alignBaseline="@id/info_Text_restaurantFollow"
+                android:layout_marginLeft="4dp"
+                android:text="리뷰"
+                android:textColor="#000000"
+                android:textSize="5pt" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,22 +80,21 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="33"
-            android:text="팔로우"/>
+            android:text="팔로우" />
 
         <Button
             android:id="@+id/info_Btn_Option"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="33"
-            android:text="옵션"/>
+            android:text="옵션" />
     </LinearLayout>
 
     <TabHost
         android:id="@+id/host"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="54"
-        >
+        android:layout_weight="54">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,28 +131,27 @@
                         android:layout_marginBottom="8dp"
                         android:layout_marginTop="8dp"
                         android:orientation="horizontal"
-                        android:weightSum="100"
-                        >
+                        android:weightSum="100">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            android:layout_marginTop="4dp"/>
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="10" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="center|left"
-                            android:layout_weight="80"
                             android:layout_marginTop="4dp"
+                            android:layout_weight="80"
                             android:text="식당 소개" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight="10"
-                            android:layout_marginTop="4dp"/>
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="10" />
 
                     </LinearLayout>
 
