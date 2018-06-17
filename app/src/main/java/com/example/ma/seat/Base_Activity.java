@@ -8,20 +8,32 @@ import android.widget.Button;
 
 public class Base_Activity extends AppCompatActivity implements View.OnClickListener{
 
-    Button searchBtn;
+    Button search_intent_Btn;
     Button restaurantA_intent_Btn;
     Button restaurantB_intent_Btn;
+    Button personalData_intent_Btn;
+    Button uploadRestaurant_intent_Btn;
+    Button signup_intent_Btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_);
 
+        search_intent_Btn = (Button)findViewById(R.id.base_Btn_Search);
         restaurantA_intent_Btn = (Button)findViewById(R.id.btn_restaurant_A);
         restaurantB_intent_Btn = (Button)findViewById(R.id.btn_restaurant_B);
+        personalData_intent_Btn = (Button)findViewById(R.id.base_Btn_PersonalData);
+        uploadRestaurant_intent_Btn = (Button)findViewById(R.id.base_Btn_UploadRestaurant);
+        signup_intent_Btn = (Button)findViewById(R.id.base_Btn_SignUp);
 
+        search_intent_Btn.setOnClickListener(this);
         restaurantA_intent_Btn.setOnClickListener(this);
         restaurantB_intent_Btn.setOnClickListener(this);
+        personalData_intent_Btn.setOnClickListener(this);
+        uploadRestaurant_intent_Btn.setOnClickListener(this);
+        signup_intent_Btn.setOnClickListener(this);
+
     }
 
         @Override

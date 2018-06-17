@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_search"
+        android:id="@+id/base_Btn_Search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="검색" />
@@ -16,7 +16,7 @@
         android:id="@+id/btn_restaurant_A"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_search"
+        android:layout_below="@id/base_Btn_Search"
         android:text="식당A"/>
 
     <Button
@@ -25,5 +25,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_restaurant_A"
         android:text="식당B"/>
+
+    <Button
+        android:id="@+id/base_Btn_PersonalData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_restaurant_B"
+        android:text="사용자 데이터"/>
+
+    <Button
+        android:id="@+id/base_Btn_UploadRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_Btn_PersonalData"
+        android:text="식당 등록"/>
+
+    <Button
+        android:id="@+id/base_Btn_SignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_Btn_UploadRestaurant"
+        android:text="회원 가입"/>
 
 </RelativeLayout>
