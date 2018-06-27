@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SEat</string>
+    <string name="profile">profile</string>
+    <string name="posts_number">854</string>
+    <string name="followers_number">637</string>
+    <string name="abos_number">315</string>
+    <string name="followers">followers</string>
+    <string name="posts">posts</string>
+    <string name="abos">abos</string>
+    <string name="follow">follow</string>
+    <string name="nickname">nickname</string>
+    <string name="introduce">introduce</string>
+    <string name="food1">food1</string>
+    <string name="food2">food2</string>
+    <string name="food3">food3</string>
+    <string name="food4">food4</string>
+    <string name="food5">food5</string>
+    <string name="food6">food6</string>
+    <string name="food7">food7</string>
+    <string name="food8">food8</string>
+    <string name="food9">food9</string>
+</resources>
