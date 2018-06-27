@@ -14,13 +14,7 @@
         android:layout_height="match_parent"
         android:columnCount="4"
         android:orientation="horizontal"
-        android:rowCount="3"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:rowCount="3">
 
         <ImageView
             android:layout_column="0"
@@ -84,10 +78,7 @@
         android:text="@string/nickname"
         android:textColor="#000000"
         android:textSize="7pt"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
     <TextView
         android:id="@+id/textView2"
@@ -96,20 +87,14 @@
         android:text="@string/introduce"
         android:textColor="#000000"
         android:textSize="6pt"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
 
     <TableLayout
         android:id="@+id/TableLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        >
 
         <TableRow>
 
