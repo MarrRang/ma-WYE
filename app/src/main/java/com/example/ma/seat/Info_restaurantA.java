@@ -10,7 +10,9 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -22,9 +24,12 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.support.v4.app.FragmentActivity;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.theartofdev.edmodo.cropper.CropImage;
@@ -37,7 +42,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Info_restaurantA extends AppCompatActivity {
+public class Info_restaurantA extends FragmentActivity{
 
     private static final int PICK_FROM_ALBUM = 1;
     private static final int PICK_FROM_CAMERA = 0;
@@ -91,6 +96,34 @@ public class Info_restaurantA extends AppCompatActivity {
         Button btn_option = (Button)findViewById(R.id.info_Btn_Option);
 
         //btn_setImg.setOnClickListener(this);
+
+
+        //식당 소개 표시여부 결정(완료)
+        TextView text_restaurantIntro = (TextView)findViewById(R.id.info_Text_restaurantIntro);
+        ScrollView view_scrollview_restaurantIntro = (ScrollView)findViewById(R.id.info_View_introRestaurant);
+
+        if(text_restaurantIntro.getText() == ""){
+            view_scrollview_restaurantIntro.setVisibility(View.GONE);
+        }
+
+
+        //네이버 지도 api 표시
+        /*
+        info_restaurant_map info_restaurant_NaverMap = new info_restaurant_map();
+        info_restaurant_NaverMap.setArguments(new Bundle());
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.add(R.id.info_Fragment_RestaurantMap, info_restaurant_NaverMap);
+        fragmentTransaction.commit();
+
+        <LinearLayout
+        android:id="@+id/info_Fragment_RestaurantMap"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"/>
+
+         */
     }
 /*
     public void doTakePhotoAction(){

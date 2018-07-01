@@ -25,7 +25,7 @@ public class Base_Activity extends AppCompatActivity implements View.OnClickList
         restaurantB_intent_Btn = (Button)findViewById(R.id.btn_restaurant_B);
         personalData_intent_Btn = (Button)findViewById(R.id.base_Btn_PersonalData);
         uploadRestaurant_intent_Btn = (Button)findViewById(R.id.base_Btn_UploadRestaurant);
-        signup_intent_Btn = (Button)findViewById(R.id.base_Btn_SignUp);
+        signup_intent_Btn = (Button)findViewById(R.id.base_Btn_SignIn);
 
         search_intent_Btn.setOnClickListener(this);
         restaurantA_intent_Btn.setOnClickListener(this);
@@ -38,9 +38,27 @@ public class Base_Activity extends AppCompatActivity implements View.OnClickList
 
         @Override
         public void onClick(View v){
-            if(v==restaurantA_intent_Btn) {
-                Intent intent = new Intent(this, Info_restaurantA.class);
-                startActivity(intent);
+
+            switch (v.getId()){
+                case R.id.btn_restaurant_A : {
+                    Intent intent = new Intent(this, Info_restaurantA.class);
+                    startActivity(intent);
+                    break;
+                }
+                case R.id.base_Btn_SignIn : {
+                    Intent intent = new Intent(this,Signin_NormalUser.class);
+                    startActivity(intent);
+                    break;
+                }
+                case R.id.base_Btn_UploadRestaurant : {
+                    Intent intent = new Intent(this,register_restaurant.class);
+                    startActivity(intent);
+                    break;
+                }
+
+
             }
+
+
         }
 }

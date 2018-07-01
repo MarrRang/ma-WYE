@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    android:weightSum="90">
+    android:layout_height="match_parent">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/info_img_pager"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="20" />
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="10"
-        android:paddingLeft="32dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/info_img_pager"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:minHeight="144dp" />
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            >
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="32dp">
 
             <TextView
                 android:id="@+id/info_Text_restaurantName"
@@ -41,77 +39,104 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/info_Text_restaurantName"
+                android:layout_marginBottom="2dp"
                 android:layout_marginTop="1dp"
                 android:text="팔로우"
                 android:textColor="#000000"
                 android:textSize="5pt" />
 
             <TextView
+                android:id="@+id/info_Count_restaurantFollow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/info_Text_restaurantFollow"
                 android:layout_alignBaseline="@id/info_Text_restaurantFollow"
                 android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/info_Text_restaurantFollow"
+                android:text="171717"
+                android:textColor="#000000"
+                android:textSize="5pt" />
+
+            <TextView
+                android:id="@+id/info_Text_restaurantReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/info_Text_restaurantFollow"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/info_Count_restaurantFollow"
                 android:text="리뷰"
                 android:textColor="#000000"
                 android:textSize="5pt" />
 
+            <TextView
+                android:id="@+id/info_Count_restaurantReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/info_Text_restaurantReview"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/info_Text_restaurantReview"
+                android:text="171717"
+                android:textColor="#000000"
+                android:textSize="5pt" />
+
+
         </RelativeLayout>
 
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:layout_weight="6"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/info_Btn_setImg"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="33"
-            android:text="이미지 등록" />
-
-        <Button
-            android:id="@+id/info_Btn_Follow"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="33"
-            android:text="팔로우" />
-
-        <Button
-            android:id="@+id/info_Btn_Option"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="33"
-            android:text="옵션" />
-    </LinearLayout>
-
-    <TabHost
-        android:id="@+id/host"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="54">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#D8D8D8" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:tabStripEnabled="false" />
+            <Button
+                android:id="@+id/info_Btn_setImg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="이미지 등록" />
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
+            <Button
+                android:id="@+id/info_Btn_Follow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="팔로우" />
+
+            <Button
+                android:id="@+id/info_Btn_Option"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="옵션" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="#D8D8D8" />
+
+        <TabHost
+            android:id="@+id/host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:tabStripEnabled="false" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -119,65 +144,145 @@
                     android:layout_marginTop="2dp"
                     android:background="#D8D8D8" />
 
-                <LinearLayout
-                    android:id="@+id/tab_content1"
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
+
 
                     <LinearLayout
+                        android:id="@+id/tab_content1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal"
-                        android:weightSum="100">
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+
+                        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/info_View_introRestaurant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="16dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="left"
+                                        android:layout_marginLeft="40dp"
+                                        android:text="식당 소개 및 근황"
+                                        android:textColor="#000000" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/info_Text_restaurantIntro"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="제곧내다음순서는 아오지 탄광 지나가던 할머니가 노래를 하시는데 다람쥐가 옆에서 어쩌구저쩌구 가볍게 들을 내용이 아니여서 할머니가
+너무나 놀란 눈치로 가브리엘"
+                                    android:textColor="#000000" />
+
+                            </LinearLayout>
+                        </ScrollView>
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="4dp"
-                            android:layout_weight="10" />
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#D8D8D8" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center|left"
-                            android:layout_marginTop="4dp"
-                            android:layout_weight="80"
-                            android:text="식당 소개" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:paddingTop="16dp">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="4dp"
-                            android:layout_weight="10" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:text="식당 정보"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:text="업데이트 날짜 20.20.20"
+                                android:textColor="#000000" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:text="가격"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:text="인당/18000원"
+                                android:textColor="#000000" />
+
+
+                        </RelativeLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/tab_content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tab 2"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tab_content2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Tab 2"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tab_content3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tab 3"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tab_content3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="Tab 3"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
+                </FrameLayout>
 
-            </FrameLayout>
+            </LinearLayout>
 
-        </LinearLayout>
-
-    </TabHost>
-</LinearLayout>
+        </TabHost>
+    </LinearLayout>
+</ScrollView>
