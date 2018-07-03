@@ -1,142 +1,199 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    android:weightSum="90">
-
-    <RelativeLayout
+    android:layout_height="match_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:layout_weight="8"
-        android:background="#FF8C00">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:weightSum="90">
 
-        <TextView
-            android:id="@+id/input_restaurantName"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="29dp"
             android:layout_margin="5dp"
-            android:gravity="center_horizontal"
-            android:text="식당 이름과 위치를 알려주세요."
-            android:textColor="#000000"
-            android:textSize="6pt" />
+            android:layout_weight="8"
+            android:background="#FF8C00">
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/input_restaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="식당 이름과 위치를 알려주세요."
+                android:textColor="#000000"
+                android:textSize="7pt" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/restaurantName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="*식당 이름 (예. 망고반점)"
-            android:textColor="#FF8C00">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/restauranttext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-
-        <TextView
-            android:id="@+id/location_restaurant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="*지역 및 위치 선택"
-            android:textColor="#FF8C00"
-            android:textSize="8pt">
-
-        </TextView>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:layout_weight="8"
-        android:background="#FF8C00"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/more_detail_info"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="*식당 이름 (예. 망고반점)"
+                android:textColor="#FF8C00">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/restauranttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="8"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/location_restaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="*지역 및 위치 선택"
+                    android:textColor="#FF8C00"
+                    android:textSize="8pt">
+
+                </TextView>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="6"
+                    android:background="#FF8C00"
+                    android:gravity="center_horizontal"
+                    android:onClick="onClick"
+                    android:orientation="vertical"
+                    android:text="MAP"
+                    android:textSize="7pt" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
             android:layout_margin="5dp"
-            android:gravity="center_horizontal"
-            android:text="조금 더 자세히 알려주세요."
-            android:textColor="#000000"
-            android:textSize="6pt" />
+            android:layout_weight="8"
+            android:background="#FF8C00"
+            android:orientation="vertical">
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/more_detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="조금 더 자세히 알려주세요."
+                android:textColor="#000000"
+                android:textSize="7pt" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
+        </RelativeLayout>
 
-        <EditText
-            android:id="@+id/phoneNumbertext"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="전화번호(예: 02-123-4567)"
-            android:textColorHint="#808080"
-            />
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/phoneNumbertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="전화번호(예: 02-123-4567)"
+                android:textColorHint="#808080" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/select_kindsOfMenu"
+                android:layout_width="106dp"
+                android:layout_height="29dp"
+                android:text="* 음식 종류 검색"
+                android:textColor="#FF8C00"
+                android:textSize="7pt" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/input_kindsOfMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:hint="음식 종류 입력(예: 한식)"
+                    android:paddingRight="13dp"
+                    android:textColorHint="#808080" />
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@+id/input_kindsOfMenu"
+                    android:layout_toRightOf="@+id/input_kindsOfMenu"
+                    android:layout_toEndOf="@+id/input_kindsOfMenu"
+                    android:layout_weight="2"
+                    android:background="#FF8C00"
+                    android:text="검색"
+                    android:textSize="7pt" />
+
+                <ListView
+                    android:id="@+id/search_kindsOfMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:divider="#000000"
+                    android:dividerHeight="1dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="6"
+                android:background="#FF8C00"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:text="추가하기"
+                android:textSize="8pt" />
+        </RelativeLayout>
+
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/select_kindsOfMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* 음식 종류 검색"
-            android:textSize="6pt"
-            android:textColor="#FF8C00"
-            />
-
-        <EditText
-            android:id="@+id/input_kindsOfMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="음식 종류 입력(예: 한식)"
-            android:textColorHint="#808080"
-            />
-
-        <ListView
-            android:id="@+id/search_kindsOfMenu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:divider="#000000"
-            android:dividerHeight="1dp"
-            />
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_margin="5dp"
-        android:layout_weight="6"
-        android:gravity="center_horizontal"
-        android:background="#FF8C00"
-        android:text="추가하기"
-        android:orientation="vertical">
-
-    </Button>
-
-</LinearLayout>
+</ScrollView>
