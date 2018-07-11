@@ -14,6 +14,7 @@ public class Base_Activity extends AppCompatActivity implements View.OnClickList
     Button personalData_intent_Btn;
     Button uploadRestaurant_intent_Btn;
     Button signup_intent_Btn;
+    Button map_intent_Btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class Base_Activity extends AppCompatActivity implements View.OnClickList
         personalData_intent_Btn = (Button)findViewById(R.id.base_Btn_PersonalData);
         uploadRestaurant_intent_Btn = (Button)findViewById(R.id.base_Btn_UploadRestaurant);
         signup_intent_Btn = (Button)findViewById(R.id.base_Btn_SignIn);
+        map_intent_Btn = (Button)findViewById(R.id.base_Btn_Map);
 
         search_intent_Btn.setOnClickListener(this);
         restaurantA_intent_Btn.setOnClickListener(this);
@@ -33,32 +35,38 @@ public class Base_Activity extends AppCompatActivity implements View.OnClickList
         personalData_intent_Btn.setOnClickListener(this);
         uploadRestaurant_intent_Btn.setOnClickListener(this);
         signup_intent_Btn.setOnClickListener(this);
+        map_intent_Btn.setOnClickListener(this);
 
     }
 
-        @Override
-        public void onClick(View v){
+    @Override
+    public void onClick(View v){
 
-            switch (v.getId()){
-                case R.id.btn_restaurant_A : {
-                    Intent intent = new Intent(this, Info_restaurantA.class);
-                    startActivity(intent);
-                    break;
-                }
-                case R.id.base_Btn_SignIn : {
-                    Intent intent = new Intent(this,Signin_NormalUser.class);
-                    startActivity(intent);
-                    break;
-                }
-                case R.id.base_Btn_UploadRestaurant : {
-                    Intent intent = new Intent(this,register_restaurant.class);
-                    startActivity(intent);
-                    break;
-                }
-
-
+        switch (v.getId()){
+            case R.id.btn_restaurant_A : {
+                Intent intent = new Intent(this, Info_restaurantA.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.base_Btn_SignIn : {
+                Intent intent = new Intent(this,Signin_NormalUser.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.base_Btn_UploadRestaurant : {
+                Intent intent = new Intent(this,register_restaurant.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.base_Btn_Map : {
+                Intent intent = new Intent(this,info_surrounded_map.class);
+                startActivity(intent);
+                break;
             }
 
 
         }
+
+
+    }
 }

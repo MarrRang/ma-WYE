@@ -43,7 +43,11 @@
         />
         <activity android:name=".info_restaurant_map" />
         <activity android:name=".register_restaurant" />
-        <activity android:name=".Signin_NormalUser"></activity>
+        <activity android:name=".Signin_NormalUser" />
+        <activity
+            android:name=".info_surrounded_map"
+            android:label="@string/title_activity_info_surrounded_map"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

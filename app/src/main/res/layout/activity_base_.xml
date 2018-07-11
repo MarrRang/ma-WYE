@@ -47,4 +47,11 @@
         android:layout_below="@id/base_Btn_UploadRestaurant"
         android:text="회원 가입"/>
 
+    <Button
+        android:id="@+id/base_Btn_Map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/base_Btn_SignIn"
+        android:text="지도 보기"/>
+
 </RelativeLayout>
