@@ -100,10 +100,14 @@ public class Info_restaurantA extends FragmentActivity{
 
         //식당 소개 표시여부 결정(완료)
         TextView text_restaurantIntro = (TextView)findViewById(R.id.info_Text_restaurantIntro);
+        TextView text_restaurantInfo = (TextView)findViewById(R.id.info_Text_restaurantInfo);
         ScrollView view_scrollview_restaurantIntro = (ScrollView)findViewById(R.id.info_View_introRestaurant);
 
         if(text_restaurantIntro.getText() == ""){
             view_scrollview_restaurantIntro.setVisibility(View.GONE);
+        }
+        if(text_restaurantInfo.getText() == ""){
+            text_restaurantInfo.setVisibility(View.GONE);
         }
 
 

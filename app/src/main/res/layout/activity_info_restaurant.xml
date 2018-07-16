@@ -193,8 +193,7 @@
                                     android:layout_marginLeft="40dp"
                                     android:layout_marginRight="40dp"
                                     android:layout_marginTop="8dp"
-                                    android:text="제곧내다음순서는 아오지 탄광 지나가던 할머니가 노래를 하시는데 다람쥐가 옆에서 어쩌구저쩌구 가볍게 들을 내용이 아니여서 할머니가
-너무나 놀란 눈치로 가브리엘"
+                                    android:text="일해라 이놈들 찰싹찰싹"
                                     android:textColor="#000000" />
 
                             </LinearLayout>
@@ -232,6 +231,15 @@
 
                         </RelativeLayout>
 
+                        <TextView
+                            android:id="@+id/info_Text_restaurantInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"/>
+
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -258,17 +266,101 @@
 
                         </RelativeLayout>
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#D8D8D8" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/info_Img_Noname1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon3"/>
+
+                            <TextView
+                                android:id="@+id/info_Text_Noname2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="잘못 되었거나 폐점된 정보를 알려주세요"
+                                android:textColor="#000000"
+                                android:textSize="6pt"
+                                android:layout_toRightOf="@id/info_Img_Noname1"
+                                android:layout_centerVertical="true"
+                                />
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#D8D8D8" />
+
+                        <RelativeLayout
+                            android:id="@+id/info_Layout_Keyword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:id="@+id/info_Text_Noname3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginLeft="40dp"
+                                android:text="이 식당의 키워드"
+                                android:textSize="7pt"
+                                android:textColor="#000000"/>
+
+
+                        </RelativeLayout>
+
                     </LinearLayout>
 
-                    <TextView
+                    <LinearLayout
                         android:id="@+id/tab_content2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="Tab 2"
-                        android:textColor="#000000"
-                        android:textSize="30dp"
-                        android:textStyle="bold" />
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="신뢰 100% 리뷰(22)"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/tab_content3"
