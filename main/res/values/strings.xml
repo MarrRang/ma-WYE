@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">apply_picture</string>
+    <string name="profile">profile</string>
+    <string name="아이디">아이디</string>
+    <string name="sticker">sticker</string>
+    <string name="좋아요">좋아요</string>
+    <string name="댓글">댓글</string>
+    <string name="메시지보내기">메시지보내기</string>
+    <string name="좋아요갯수">좋아요갯수</string>
+    <string name="댓글창입니다">댓글창입니다</string>
+</resources>
